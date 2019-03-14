@@ -52,13 +52,14 @@ public class janela extends JFrame {
 	JButton lblv = new JButton(",");
 	JButton lbli = new JButton("=");
 	JButton lblumx = new JButton("1/x");
+	
 
 
 	FuncoesMatematicas mat = new FuncoesMatematicas();
   	String sinal = null;
   			double valor1 = 0, valor2 = 0;
   			
-  			
+  			double memoria = 0;
 	
 	
 	
@@ -204,10 +205,30 @@ public class janela extends JFrame {
 	     
 	    paine.add(lblmc);
 	    lblmc.setBounds(10, 80, 55, 25);
+	    lblbmais.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				memoria = 0;
+			}
+		});
 	    paine.add(lblmr);
 	    lblmr.setBounds(70, 80, 55, 25);
+	    lblmr.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent e) {
+				if(lblbranco.getText().equals("0")) {
+					lblbranco.setText("0" + memoria);
+				}else {
+					lblbranco.setText(lblbranco.getText() +  "");
+				}
+}
+		});
+		
 	    paine.add(lblms);
 	    lblms.setBounds(130, 80, 55, 25);
+	    lblbmais.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 memoria = 0 + valor1;
+			}
+		});
 	    paine.add(lblbmais);
 	    lblbmais.setBounds(188, 80, 55, 25);
 	    lblbmais.addActionListener(new ActionListener() {
@@ -244,11 +265,26 @@ public class janela extends JFrame {
 	    
 	    paine.add(lblumx);
 	    lblumx.setBounds(247, 133, 55, 25);
+	    lblumx.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				valor1 = Double.parseDouble(lblbranco.getText());
+				sinal = "um";
+				lblbranco.setText("0");
+			}
+		});
 	    
 	   // Comando para virgula 
 	    paine.add(lblv);
 	    lblv.setBounds(130, 220, 55, 25);
-	   
+	    lblv.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(lblbranco.getText().equals("0")) {
+					lblbranco.setText(",");
+				}else {
+					lblbranco.setText(lblbranco.getText() + ",");
+				}
+}
+		});
 	       
 	  //Operadores lógicos
 	    
@@ -334,8 +370,14 @@ public class janela extends JFrame {
 				else if (sinal.equals("raizq")) {
 					lblbranco.setText(mat.raizq(valor1) + "");
 				}
+			else if (sinal.equals("um")) {
+				lblbranco.setText(mat.um(valor1) + "");
 			}
-		});
+				
+			
+			}
+	    }
+		);
 	
 	
 		this.setSize(320,280); 
