@@ -59,7 +59,7 @@ public class janela extends JFrame {
   	String sinal = null;
   			double valor1 = 0, valor2 = 0;
   			
-  			double memoria = 0;
+  			double ms = 0;
 	
 	
 	
@@ -207,7 +207,7 @@ public class janela extends JFrame {
 	    lblmc.setBounds(10, 80, 55, 25);
 	    lblbmais.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				memoria = 0;
+				ms = valor1;
 			}
 		});
 	    paine.add(lblmr);
@@ -215,7 +215,7 @@ public class janela extends JFrame {
 	    lblmr.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent e) {
 				if(lblbranco.getText().equals("0")) {
-					lblbranco.setText("0" + memoria);
+					lblbranco.setText("ms");
 				}else {
 					lblbranco.setText(lblbranco.getText() +  "");
 				}
@@ -226,7 +226,7 @@ public class janela extends JFrame {
 	    lblms.setBounds(130, 80, 55, 25);
 	    lblbmais.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 memoria = 0 + valor1;
+				 ms = 0 + valor1;
 			}
 		});
 	    paine.add(lblbmais);
