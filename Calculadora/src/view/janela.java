@@ -214,13 +214,8 @@ public class janela extends JFrame {
 	    lblmr.setBounds(70, 80, 55, 25);
 	    lblmr.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent e) {
-				if(lblbranco.getText().equals("0")) {
-					lblbranco.setText("ms");
-				}else {
-					lblbranco.setText(lblbranco.getText() +  "");
-				}
-}
-		});
+	    		lblbranco.setText( "" + valor1);
+	    	}});
 		
 	    paine.add(lblms);
 	    lblms.setBounds(130, 80, 55, 25);
@@ -296,6 +291,10 @@ public class janela extends JFrame {
 				valor1 = Double.parseDouble(lblbranco.getText());
 				sinal = "soma";
 				lblbranco.setText("0");
+				if (sinal.equals("ms")) {
+					 ms = 0 + valor1;
+					
+				}
 			}
 		});
 	    paine.add(lblsub);
