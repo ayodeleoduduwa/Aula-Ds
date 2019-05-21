@@ -1,6 +1,6 @@
 package VIEW;
 
-public class cadastro {
+public class cadastro {/*
 public static void main (String args []) {
 
 	Pessoafisica pf = new Pessoafisica();
@@ -47,5 +47,5 @@ public static void main (String args []) {
 	System.out.println(pj.getEndereco());
 	
 	
-}
+}*/
 }

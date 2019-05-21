@@ -1,6 +1,6 @@
 package VIEW;
 
-public class Pessoajuridica extends Pessoa  {
+public class Pessoajuridica {/*extends Pessoa  {
       private String razaosocical;
 	
 	
@@ -11,6 +11,6 @@ public class Pessoajuridica extends Pessoa  {
       public void setRazaosocial(String razaosocical) {
           this.razaosocical = razaosocical;
 }
-
+*/
  
 }

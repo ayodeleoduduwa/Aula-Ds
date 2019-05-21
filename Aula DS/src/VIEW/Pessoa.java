@@ -1,8 +1,8 @@
 package VIEW;
 
-public class Pessoa {
+public class Pessoa extends Usuario{
     //cadastros de pessoas objetos privados
-	private String nome, endereco, bairro;
+	/* private String nome, endereco, bairro;
 	private int cpf, rg, idade, cep;
 	
 	public String getNome() {
@@ -30,9 +30,6 @@ public class Pessoa {
 	}
  	
 	
-	
-	
-	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -58,8 +55,14 @@ public class Pessoa {
 	
 	public void Cep (int cep) {
 		this.cep = cep;
+	}*/
+	
+	Pessoa (String nkn, String passw) {
+		super(nkn, passw);
 	}
-	
+	Pessoa p = new Pessoa("Ayodele", "123");{
 
+	System.out.println(p.nickname);
 	
+}
 }

@@ -1,6 +1,6 @@
 package VIEW;
 
-public class Pessoafisica extends Pessoa{
+public class Pessoafisica {/* extends Pessoa{
 	private String nome;
 	
 	
@@ -11,5 +11,5 @@ public void setNome(String nome) {
 	 this.nome = nome;
 }
 
-
+*/
 }
